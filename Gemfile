@@ -41,3 +41,5 @@ group :development, :test do
 end
 
 
+
+gem "faker", "~> 3.5"
