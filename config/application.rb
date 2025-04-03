@@ -8,6 +8,15 @@ Bundler.require(*Rails.groups)
 
 module RailsPostgreGraphql
   class Application < Rails::Application
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*',
+                 headers: :any,
+                 expose: %w(access-token expiry token-type uid client),
+                 methods: %i(post)
+      end
+    end
     config.active_record.query_log_tags_enabled = true
     config.active_record.query_log_tags = [
       # Rails query log tags:

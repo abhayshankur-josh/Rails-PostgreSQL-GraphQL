@@ -5,6 +5,7 @@ module Mutations
     description "Creates a new blog"
 
     field :blog, Types::BlogType, null: false
+    field :message, String
 
     argument :title, String, required: true
     argument :description, String, required: true
@@ -14,7 +15,7 @@ module Mutations
       blog = Blog.new(title:, description:, user_id:)
       raise GraphQL::ExecutionError.new "Error creating blog", extensions: blog.errors.to_hash unless blog.save
 
-      { blog: blog }
+      { blog: blog, message: 'Blog created successfully' }
     end
   end
 end

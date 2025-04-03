@@ -47,3 +47,5 @@ gem "faker", "~> 3.5"
 gem "graphql", "~> 2.4"
 
 gem "graphiql-rails", "~> 1.10"
+
+gem "rack-cors", "~> 2.0"

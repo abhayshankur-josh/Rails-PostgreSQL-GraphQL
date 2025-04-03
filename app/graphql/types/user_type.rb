@@ -3,9 +3,11 @@
 module Types
   class UserType < Types::BaseObject
     field :id, ID, null: false
-    field :first_name, String
-    field :last_name, String
+    field :user_name, String
     field :email, String
     
+    def user_name
+      "#{object.first_name} #{object.last_name}" 
+    end
   end
 end
