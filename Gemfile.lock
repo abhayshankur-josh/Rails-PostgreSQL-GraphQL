@@ -97,7 +97,7 @@ GEM
       activesupport (>= 6.1)
     graphiql-rails (1.10.4)
       railties
-    graphql (2.4.15)
+    graphql (2.5.2)
       base64
       fiber-storage
       logger
@@ -256,7 +256,7 @@ DEPENDENCIES
   debug
   faker (~> 3.5)
   graphiql-rails (~> 1.10)
-  graphql (~> 2.4)
+  graphql (~> 2.5)
   pg (~> 1.1)
   puma (>= 5.0)
   rack-cors (~> 2.0)
