@@ -1,4 +1,5 @@
-class GraphqlChannel < ApplicationCable::Channel4def subscribed
+class GraphqlChannel < ApplicationCable::Channel
+  def subscribed
     # Store all GraphQL subscriptions the consumer is listening for on this channel
     @subscription_ids = []
   end
